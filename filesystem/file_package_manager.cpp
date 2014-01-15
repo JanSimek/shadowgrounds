@@ -10,7 +10,6 @@
 #include "empty_buffer.h"
 #include "file_list.h"
 #include <map>
-#include <boost/algorithm/string/case_conv.hpp>
 
 #include "../system/Logger.h"
 
@@ -82,30 +81,26 @@ namespace frozenbyte {
                 fclose(missingFilesLog);
             }
 
-            bool exists(std::string fileName) const {
-                std::replace(fileName.begin(), fileName.end(), '\\', '/');
-                std::string lowercase = boost::algorithm::to_lower_copy(fileName);
-
-                for (PackageMap::const_reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
-                    if (it->second->exists(fileName) || it->second->exists(lowercase))
-                        return true;
-                }
-                return false;
-            }
-
             InputStream getFile(std::string fileName, FilePackageManager::Mode mode)
             {
-                std::replace(fileName.begin(), fileName.end(), '\\', '/');
+                for (unsigned int i = 0; i < fileName.size(); ++i) {
+                    if (fileName[i] == '\\')
+                        fileName[i] = '/';
+                }
 
-                for (PackageMap::const_reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
+                for (PackageMap::reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
                     InputStream result = it->second->getFile(fileName);
                     if ( !result.isEof() )
                         return result;
                 }
 
-                boost::algorithm::to_lower(fileName);
+                // Not found, try again all lowercase
+                for (unsigned int i = 0; i < fileName.size(); ++i) {
+                    if ( isupper(fileName[i]) )
+                        fileName[i] = tolower(fileName[i]);
+                }
 
-                for (PackageMap::const_reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
+                for (PackageMap::reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
                     InputStream result = it->second->getFile(fileName);
                     if ( !result.isEof() )
                         return result;
@@ -116,7 +111,6 @@ namespace frozenbyte {
                     fprintf(missingFilesLog, "%s\n", fileName.c_str());
                     fprintf(missingFilesBacktraces, "Missing file: '%s' ", fileName.c_str());
                     igios_backtrace(missingFilesBacktraces);
-                    Logger::getInstance()->info2("Missing file: '%s'\n", fileName.c_str());
                 }
 
                 InputStream inputStream;
@@ -133,17 +127,19 @@ namespace frozenbyte {
                         fileName[i] = '/';
                 }
 
-                for (PackageMap::const_reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
+                for (PackageMap::reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
                     unsigned int result = it->second->getCrc(fileName);
                     if (result != 0)
                         return result;
                 }
 
                 // Not found, try again all lowercase
-                boost::algorithm::to_lower(fileName);
+                for (unsigned int i = 0; i < fileName.size(); ++i) {
+                    if ( isupper(fileName[i]) )
+                        fileName[i] = tolower(fileName[i]);
+                }
 
-
-                for (PackageMap::const_reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
+                for (PackageMap::reverse_iterator it = packages.rbegin(); it != packages.rend(); ++it) {
                     unsigned int result = it->second->getCrc(fileName);
                     if (result != 0)
                         return result;
@@ -187,9 +183,6 @@ namespace frozenbyte {
             return data->getFile(fileName, mode);
         }
 
-        bool FilePackageManager::exists(const std::string& fileName) const {
-            return data->exists(fileName);
-        }
         unsigned int FilePackageManager::getCrc(const std::string &fileName)
         {
             return data->getCrc(fileName);
@@ -209,8 +202,6 @@ namespace frozenbyte {
 
             return *instancePtr;
         }
-
-
 
         void FilePackageManager::setInstancePtr(FilePackageManager *newInstance)
         {

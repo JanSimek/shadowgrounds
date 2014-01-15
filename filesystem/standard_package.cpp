@@ -11,8 +11,10 @@
 #include "ifile_list.h"
 #include "../editor/FindFileWrapper.h"
 #include <string>
-#include <unistd.h>
-#include <boost/algorithm/string/case_conv.hpp>
+
+//#include <unistd.h>
+//#include <boost/algorithm/string/case_conv.hpp>
+
 #include "../util/Debug_MemoryManager.h"
 
 #include "../util/crc32.h"
@@ -82,11 +84,6 @@ namespace frozenbyte {
         {
             return createInputFileStream(fileName);
         }
-
-        bool StandardPackage::exists(const std::string& fileName) const {
-            return access(fileName.c_str(), F_OK) == 0;
-        }
-
 
         unsigned int StandardPackage::getCrc(const std::string &fileName)
         {
