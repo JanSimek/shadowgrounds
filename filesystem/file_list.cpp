@@ -10,7 +10,6 @@
 #include <map>
 #include <vector>
 #include <algorithm>
-#include <boost/algorithm/string/case_conv.hpp>
 
 #include "file_list.h"
 
@@ -26,8 +25,13 @@ namespace frozenbyte {
     namespace filesystem {
         void convertLower(std::string &str)
         {
-            std::replace(str.begin(), str.end(), '\\', '/');
-            boost::algorithm::to_lower(str);
+            for (unsigned int i = 0; i < str.size(); ++i) {
+                if ( isupper(str[i]) )
+                    str[i] = tolower(str[i]);
+
+                if (str[i] == '\\')
+                    str[i] = '/';
+            }
         }
 
         /*
