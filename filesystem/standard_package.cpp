@@ -11,9 +11,7 @@
 #include "ifile_list.h"
 #include "../editor/FindFileWrapper.h"
 #include <string>
-
-//#include <unistd.h>
-//#include <boost/algorithm/string/case_conv.hpp>
+#include <boost/algorithm/string/case_conv.hpp>
 
 #include "../util/Debug_MemoryManager.h"
 
