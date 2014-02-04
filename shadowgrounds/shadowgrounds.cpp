@@ -439,6 +439,8 @@ int main(int argc, char *argv[])
 
         Logger::createInstanceForLogfile( path.c_str() );
 
+        setsighandler();
+
         opt::variables_map vm;
         parse_commandline(argc, argv, vm);
 

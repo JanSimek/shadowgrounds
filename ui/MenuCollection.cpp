@@ -536,14 +536,14 @@ namespace ui {
         void closeMenu()
         {
             // FIXME: had to add a few workarounds because several crashes
-            //        occur when menu is closed. 
+            //        occur when menu is closed.
             //        Something is wrong earlier in the code.
             openedMenus.pop();
 
             int menu = openedMenus.empty() ? 0 : openedMenus.top();
-            
+
             // crash #1
-            if(activeMenu) 
+            if(activeMenu)
             {
                 activeMenu->applyChanges();
 
@@ -564,7 +564,7 @@ namespace ui {
                 {
                     activeMenu = openedMenusData.top();
                 }
-            
+
                 // crash #3
                 if(!openedMenus.empty())
                 {

@@ -1,3 +1,5 @@
+# TODO split CMakeLists.txt
+
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
 PROJECT( shadowgrounds )
 SET( CPACK_PACKAGE_VERSION_MAJOR    1 )
@@ -106,25 +108,32 @@ ELSE ( ENABLE_PHYSX )
     ADD_DEFINITIONS( -DPHYSICS_NONE )
 ENDIF ( ENABLE_PHYSX )
 
-SET ( CMAKE_DATA_PATH         "" CACHE STRING "Path to the top directory containing game data files" )
-SET ( SHADOWGROUNDS_DATA_PATH "" CACHE STRING "Path to Shadowgrounds game data files (overrides CMAKE_DATA_PATH)" )
-SET ( SURVIVOR_DATA_PATH      "" CACHE STRING "Path to Survivor game data files (overrides CMAKE_DATA_PATH)" )
-
+# Data paths
 IF ( NOT CMAKE_DATA_PATH )
     IF ( UNIX )
         SET( CMAKE_DATA_PATH "/usr/share/games" )
     ELSEIF ( NOT SHADOWGROUNDS_DATA_PATH OR NOT SURVIVOR_DATA_PATH )
-        MESSAGE( STATUS "WARNING: Neither {SHADOWGROUNDS,SURVIVOR}_DATA_PATH nor CMAKE_DATA_PATH is defined" )
+        MESSAGE( WARNING "WARNING: Neither {SHADOWGROUNDS,SURVIVOR}_DATA_PATH nor CMAKE_DATA_PATH is defined" )
     ENDIF ( UNIX )
 ENDIF ( NOT CMAKE_DATA_PATH)
 
-IF( NOT SHADOWGROUNDS_DATA_PATH )
-    SET( SHADOWGROUNDS_DATA_PATH "${CMAKE_DATA_PATH}/shadowgrounds" CACHE PATH "Path to Shadowgrounds data files" FORCE )
-ENDIF( NOT SHADOWGROUNDS_DATA_PATH )
+IF( SHADOWGROUNDS_DATA_PATH )
+    # user-specified path
+    SET( SHADOWGROUNDS_DATA_PATH "${SHADOWGROUNDS_DATA_PATH}" CACHE PATH "Path to Shadowgrounds data files (overrides CMAKE_DATA_PATH)" )
+ELSEIF( CMAKE_DATA_PATH )
+    SET( SHADOWGROUNDS_DATA_PATH "${CMAKE_DATA_PATH}/shadowgrounds" )
+ENDIF()
 
-IF( NOT SURVIVOR_DATA_PATH )
-    SET( SURVIVOR_DATA_PATH "${CMAKE_DATA_PATH}/survivor" CACHE PATH "Path to Shadowgrounds Survivor data files" FORCE )
-ENDIF( NOT SURVIVOR_DATA_PATH )
+IF( SURVIVOR_DATA_PATH )
+    # user-specified path
+    SET( SURVIVOR_DATA_PATH "${SURVIVOR_DATA_PATH}" CACHE PATH "Path to Shadowgrounds Survivor data files (overrides CMAKE_DATA_PATH)" )
+ELSEIF( CMAKE_DATA_PATH )
+    SET( SURVIVOR_DATA_PATH "${CMAKE_DATA_PATH}/survivor" )
+ENDIF()
+
+SET( CMAKE_DATA_PATH "${CMAKE_DATA_PATH}" CACHE PATH "Path to the top directory containing game data files" )
+message( "CMAKE_DATA_PATH=${CMAKE_DATA_PATH}\nSHADOWGROUNDS_DATA_PATH=${SHADOWGROUNDS_DATA_PATH}\nSURVIVOR_DATA_PATH=${SURVIVOR_DATA_PATH}")
+
 
 OPTION( LINKEDLIST_USE_NODE_POOL "Keep linkedlist nodes in pool, less dynamic memory allocations" ON )
 OPTION( CRIMSON_MODE "The new non-rts, pure action game - \"crimson mode\"" ON )
@@ -136,7 +145,7 @@ IF( NOT LIGHT_MAX_AMOUNT )
     SET( LIGHT_MAX_AMOUNT "5" CACHE STRING "Amount of light or what? Integer" FORCE )   # cmake doesn't support integers
 ENDIF( NOT LIGHT_MAX_AMOUNT )
 MARK_AS_ADVANCED( LINKEDLIST_USE_NODE_POOL BUILDINGMAP_SHOW_LOADINGMESSAGE LIGHT_MAX_AMOUNT )
-CONFIGURE_FILE( ${CMAKE_SOURCE_DIR}/project_common/configuration.h.in ${CMAKE_BINARY_DIR}/project_common/configuration.h )
+CONFIGURE_FILE( project_common/configuration.h.in ${PROJECT_BINARY_DIR}/project_common/configuration.h )
 
 
 # ------------------------------------------------
@@ -430,7 +439,7 @@ IF ( UNIX )
 ENDIF( UNIX )
 
 # some files must be compiled unoptimized (gcc bug?)
-IF( UNIX )
+IF( UNIX ) # both gcc & clang ;)
     SET_SOURCE_FILES_PROPERTIES(
         storm/storm3dv2/Storm3D_Mesh_CollisionTable.cpp
         util/LipsyncManager.cpp
@@ -440,7 +449,7 @@ IF( UNIX )
 ENDIF( UNIX )
 
 IF( MSVC )
- ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS) # Do not show CRT warnings
+    ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS) # Do not show CRT warnings
 ENDIF( MSVC)
 
 # Set default build options
@@ -451,10 +460,12 @@ MACRO( SetShadowgroundsProperties name defines )
 
     IF( MSVC )
         SET( INCLUDE_FLAG "/FI" )
-    ELSE ()
-        SET( INCLUDE_FLAG "-include " )
-    ENDIF ()
-    
+    ELSEIF( CMAKE_COMPILER_IS_GNUCXX )
+         SET( INCLUDE_FLAG "-include " )
+    ELSE()
+        MESSAGE( FATAL_ERROR "Unsupported compiler: can not specify global include file" )
+    ENDIF()
+
     SET_TARGET_PROPERTIES( ${name} PROPERTIES
         COMPILE_FLAGS               "${SG_WARNINGS} ${INCLUDE_FLAG}${PROJECT_BINARY_DIR}/project_common/configuration.h"
         COMPILE_DEFINITIONS         "${defines};SG_PROG_VERSION=\"${SG_PROG_VERSION}\";SG_PROG_HOST=\"${CMAKE_SYSTEM_NAME}\""

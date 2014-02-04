@@ -27,7 +27,6 @@ namespace frozenbyte {
             FilePackageManager();
             ~FilePackageManager();
 
-
             enum Mode {
                 REQUIRED = 0, NOTREQUIRED = 1,
             };
