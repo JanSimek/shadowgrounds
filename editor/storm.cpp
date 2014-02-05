@@ -78,7 +78,7 @@ namespace frozenbyte {
     float ts = .7f;
     storm->addAdditionalRenderTargets(VC2(ts, ts), 1);
  */
-            if ( !storm->SetWindowedMode(hwnd) { //, disableBuffers) ) {
+            if ( !storm->SetWindowedMode(hwnd) ) { //, disableBuffers) ) {
                 std::string error = storm->GetErrorString();
                 MessageBox(hwnd, error.c_str(), "Failed to initialize storm.", MB_OK);
 
