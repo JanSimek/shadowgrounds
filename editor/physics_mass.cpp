@@ -42,7 +42,7 @@ namespace frozenbyte {
 
             void parseData()
             {
-                Parser parser;
+                EditorParser parser;
                 filesystem::FilePackageManager::getInstance().getFile(fileName) >> parser;
 
                 const ParserGroup &globals = parser.getGlobals();

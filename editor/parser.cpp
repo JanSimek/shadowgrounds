@@ -316,13 +316,13 @@ namespace frozenbyte {
 
         ParserGroup::ParserGroup()
         {
-            boost::scoped_ptr<ParserGroupData> tempData( new ParserGroupData() );
+            /*boost::scoped_ptr*/ boost::shared_ptr<ParserGroupData> tempData( new ParserGroupData() );
             data.swap(tempData);
         }
 
         ParserGroup::ParserGroup(const ParserGroup &rhs)
         {
-            boost::scoped_ptr<ParserGroupData> tempData( new ParserGroupData() );
+            /*boost::scoped_ptr*/ boost::shared_ptr<ParserGroupData> tempData( new ParserGroupData() );
             tempData->copy( *rhs.data.get() );
 
             data.swap(tempData);
@@ -541,7 +541,7 @@ namespace frozenbyte {
 
         EditorParser::EditorParser(bool logUnreferenced, bool logNonExisting)
         {
-            boost::scoped_ptr<ParserData> tempData( new ParserData() );
+            /*boost::scoped_ptr*/ boost::shared_ptr<ParserData> tempData( new ParserData() );
             data.swap(tempData);
             data->logUnreferenced = logUnreferenced;
             data->logNonExisting = logNonExisting;

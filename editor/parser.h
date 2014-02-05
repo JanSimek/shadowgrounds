@@ -3,6 +3,10 @@
 #ifndef INCLUDED_EDITOR_EDITOR_PARSER
 #define INCLUDED_EDITOR_EDITOR_PARSER
 
+#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
+#  define INCLUDED_BOOST_SHARED_PTR_HPP
+#  include <boost/shared_ptr.hpp>
+#endif
 #ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
 #  define INCLUDED_BOOST_SCOPED_PTR_HPP
 #  include <boost/scoped_ptr.hpp>
@@ -27,7 +31,7 @@ namespace frozenbyte {
         struct ParserData;
 
         class ParserGroup {
-            boost::scoped_ptr<ParserGroupData> data;
+            /*boost::scoped_ptr*/ boost::shared_ptr<ParserGroupData> data;
 
         public:
             ParserGroup();
@@ -74,7 +78,7 @@ namespace frozenbyte {
         }
 
         class EditorParser {
-            boost::scoped_ptr<ParserData> data;
+            /*boost::scoped_ptr*/ boost::shared_ptr<ParserData> data;
 
         public:
             // the new error whine to get rid of the f*ed up "silently ignore errors" feature. --jpk
