@@ -3,10 +3,11 @@
 #pragma warning(disable:4103)
 #pragma warning(disable:4786)
 
+#include <windows.h>
+
 #include "align_units.h"
 #include "camera.h"
-#include <istorm3d_scene.h>
-#include <windows.h>
+#include <IStorm3D_Scene.h>
 
 namespace frozenbyte {
     namespace editor {

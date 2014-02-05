@@ -3,10 +3,7 @@
 #ifndef INCLUDED_EDITOR_COLOR_PICKER_H
 #define INCLUDED_EDITOR_COLOR_PICKER_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
+#include <boost/scoped_ptr.hpp>
 
 namespace frozenbyte {
     namespace filesystem {

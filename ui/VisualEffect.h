@@ -3,10 +3,7 @@
 
 #include <DatatypeDef.h>
 
-#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
-#  define INCLUDED_BOOST_SHARED_PTR_HPP
-#  include <boost/shared_ptr.hpp>
-#endif
+#include <boost/shared_ptr.hpp>
 
 #include "../game/unified_handle_type.h"
 

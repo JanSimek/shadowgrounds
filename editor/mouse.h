@@ -3,15 +3,12 @@
 #ifndef INCLUDED_EDITOR_MOUSE_H
 #define INCLUDED_EDITOR_MOUSE_H
 
-#ifndef INCLUDED_WINDOWS_H
-#  define INCLUDED_WINDOWS_H
-#  include <windows.h>
-#endif
+#include <windows.h>
 
 struct Storm3D_CollisionInfo;
 class ObstacleCollisionInfo;
 
-#include <datatypedef.h>
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

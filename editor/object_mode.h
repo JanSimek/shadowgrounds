@@ -3,14 +3,9 @@
 #ifndef INCLUDED_EDITOR_OBJECT_MODE_H
 #define INCLUDED_EDITOR_OBEJCT_MODE_H
 
-#ifndef INCLUDED_EDITOR_IMODE_H
-#  include "imode.h"
-#endif
+#include "imode.h"
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
+#include <boost/scoped_ptr.hpp>
 
 namespace frozenbyte {
     namespace editor {

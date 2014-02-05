@@ -8,28 +8,13 @@
 #  pragma warning(disable: 4710) // function not inlined
 #endif
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include <string>
+#include <vector>
 
-#ifndef INCLUDED_EXPORT_MODEL_H
-#  include "Export_Model.h"
-#endif
-#ifndef INCLUDED_EXPORT_OBJECT_H
-#  include "Export_Object.h"
-#endif
-#ifndef INCLUDED_EXPORT_MATERIAL_H
-#  include "Export_Material.h"
-#endif
-#ifndef INCLUDED_EXPORT_BONE_H
-#  include "Export_Bone.h"
-#endif
-
+#include "Export_Model.h"
+#include "Export_Object.h"
+#include "Export_Material.h"
+#include "Export_Bone.h"
 #include "Export_Types.h"
 
 namespace frozenbyte {

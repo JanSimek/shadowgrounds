@@ -3,10 +3,7 @@
 #ifndef PARTICLE_RANDOM_H
 #define PARTICLE_RANDOM_H
 
-#ifndef INCLUDED_BOOST_MERSENNE_TWISTER_HPP
-#  define INCLUDED_BOOST_MERSENNE_TWISTER_HPP
-#  include <boost/random/mersenne_twister.hpp>
-#endif
+#include <boost/random/mersenne_twister.hpp>
 
 namespace frozenbyte
 {

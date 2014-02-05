@@ -8,10 +8,6 @@
 #include "../filesystem/output_file_stream.h"
 #include <map>
 
-//#ifdef _MSC_EXTENSIONS
-//#  define for if (false) { } else { for
-//#endif
-
 namespace frozenbyte {
     namespace editor {
         namespace {

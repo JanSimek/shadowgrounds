@@ -3,11 +3,7 @@
 #ifndef INCLUDED_VIEWER_APPLICATION_H
 #define INCLUDED_VIEWER_APPLICATION_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-
+#include <boost/scoped_ptr.hpp>
 #include <string>
 
 namespace frozenbyte {

@@ -3,17 +3,10 @@
 #ifndef INCLUDED_FILESYSTEM_FILE_PACKAGE_MANAGER
 #define INCLUDED_FILESYSTEM_FILE_PACKAGE_MANAGER
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
-#  define INCLUDED_BOOST_SHARED_PTR_HPP
-#  include <boost/shared_ptr.hpp>
-#endif
-#ifndef INCLUDED_FILESYSTEM_IFILE_PACKAGE
-#  include "ifile_package.h"
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <boost/shared_ptr.hpp>
+
+#include "ifile_package.h"
 
 namespace frozenbyte {
     namespace filesystem {

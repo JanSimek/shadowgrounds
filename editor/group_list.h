@@ -5,8 +5,9 @@
 
 #include <boost/scoped_ptr.hpp>
 #include <string>
-#include <datatypedef.h>
 #include <vector>
+
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

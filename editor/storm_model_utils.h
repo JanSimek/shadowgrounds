@@ -3,14 +3,8 @@
 #ifndef INCLUDED_EDITOR_STORM_MODEL_UTILS_H
 #define INCLUDED_EDITOR_STORM_MODEL_UTILS_H
 
-#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
-#  define INCLUDED_BOOST_SHARED_PTR_HPP
-#  include <boost/shared_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <boost/shared_ptr.hpp>
+#include <string>
 
 class IStorm3D;
 class IStorm3D_Model;

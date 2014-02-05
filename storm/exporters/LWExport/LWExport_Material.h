@@ -7,24 +7,10 @@
 #  pragma warning(disable: 4786) // identifier truncate
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
-
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-
-#ifndef INCLUDED_LWSURF_H
-#  define INCLUDED_LWSURF_H
-#  include <lwsurf.h>
-#endif
+#include <DataTypeDef.h>
+#include <vector>
+#include <string>
+#include <lwsurf.h>
 
 namespace frozenbyte {
     namespace exporter {

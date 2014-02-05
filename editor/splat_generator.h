@@ -3,14 +3,8 @@
 #ifndef INCLUDED_SPLAT_GENERATOR_H
 #define INCLUDED_SPLAT_GENERATOR_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <datatypedef.h>
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <datatypedef.h>
 
 namespace frozenbyte {
     namespace editor {

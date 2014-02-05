@@ -4,7 +4,8 @@
 #define INCLUDED_EDITOR_TERRAIN_COLORMAP_H
 
 #include <boost/scoped_ptr.hpp>
-#include <datatypedef.h>
+
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace filesystem {

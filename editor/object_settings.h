@@ -3,22 +3,10 @@
 #ifndef INCLUDED_EDITOR_OBJECT_SETTINGS_H
 #define INCLUDED_EDITOR_OBJECT_SETTINGS_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-#ifndef INCLUDED_MAP
-#  define INCLUDED_MAP
-#  include <map>
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <string>
+#include <vector>
+#include <map>
 
 namespace frozenbyte {
     namespace editor {

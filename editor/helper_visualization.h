@@ -3,14 +3,9 @@
 #ifndef INCLUDED_EDITOR_HELPER_VISUALIZATION_H
 #define INCLUDED_EDITOR_HELPER_VISUALIZATION_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <datatypedef.h>
-#endif
+#include <boost/scoped_ptr.hpp>
+
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

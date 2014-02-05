@@ -8,6 +8,7 @@
 #include "parser.h"
 #include "../filesystem/input_file_stream.h"
 #include "../filesystem/file_package_manager.h"
+
 #include <istorm3d_model.h>
 #include <boost/shared_ptr.hpp>
 #include <vector>

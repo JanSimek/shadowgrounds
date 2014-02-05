@@ -8,22 +8,12 @@
 #  pragma warning(disable: 4710) // function not inlined
 #endif
 
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-
-#ifndef INCLUDED_EXPORT_OBJECT_H
-#  include "Export_Object.h"
-#endif
-#ifndef INCLUDED_EXPORT_MATERIAL_H
-#  include "Export_Material.h"
-#endif
-#ifndef INCLUDED_EXPORT_HELPER_H
-#  include "Export_Helper.h"
-#endif
-
+#include <vector>
 #include <boost/shared_ptr.hpp>
+
+#include "Export_Object.h"
+#include "Export_Material.h"
+#include "Export_Helper.h"
 
 namespace frozenbyte {
     namespace exporter {

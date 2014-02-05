@@ -7,16 +7,9 @@
 #  pragma warning(disable: 4514) // removed unreferenced inline function (stl)
 #endif
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <string>
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
-
+#include <DataTypeDef.h>
 #include "Export_Types.h"
 
 namespace frozenbyte {

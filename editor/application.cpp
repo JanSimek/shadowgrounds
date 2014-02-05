@@ -34,13 +34,15 @@
 #include "../filesystem/file_package_manager.h"
 #include "../util/hiddencommand.h"
 
-#include <vector>
 #include <windows.h>
-#include <istorm3d.h>
+#include <vector>
+
+#include <IStorm3D.h>
 #include <istorm3d_terrain_renderer.h>
 #include <istorm3d_terrain_decalsystem.h>
 #include <istorm3d_spotlight.h>
 #include <istorm3d_videostreamer.h>
+
 #include <stdio.h>
 #include <fstream>
 #include <boost/scoped_array.hpp>

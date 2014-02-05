@@ -3,10 +3,11 @@
 #ifndef INCLUDED_EDITOR_TERRAIN_LIGHTMAP_H
 #define INCLUDED_EDITOR_TERRAIN_LIGHTMAP_H
 
-#include "terrain_lightmap.h"
 #include <boost/scoped_ptr.hpp>
-#include <datatypedef.h>
 #include <vector>
+
+#include "terrain_lightmap.h"
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace filesystem {

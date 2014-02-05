@@ -7,35 +7,13 @@
 #  pragma warning(disable: 4786) // identifier truncate
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
-
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-
-#ifndef INCLUDED_LWMESHES_H
-#  define INCLUDED_LWMESHES_H
-#  include <lwmeshes.h>
-#endif
-#ifndef INCLUDED_LWRENDER_H
-#  define INCLUDED_LWRENDER_H
-#  include <lwrender.h>
-#endif
-
-#ifndef INCLUDED_LWEXPORT_MATERIAL_H
-#  include "LWExport_Material.h"
-#endif
-#ifndef INCLUDED_LWEXPORT_BONE_H
-#  include "LWExport_Bone.h"
-#endif
+#include <DataTypeDef.h>
+#include <vector>
+#include <string>
+#include <lwmeshes.h>
+#include <lwrender.h>
+#include "LWExport_Material.h"
+#include "LWExport_Bone.h"
 
 #include "../Shared/Export_Types.h"
 

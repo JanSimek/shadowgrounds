@@ -50,10 +50,7 @@
     -- psd
  */
 
-#    ifndef INCLUDED_NEW
-#      define INCLUDED_NEW
-#      include <new>
-#    endif
+#include <new>
 
 #    ifdef _MSC_VER
 #      pragma warning(disable: 4290) // Exception specification ignored. MSC uses legacy system anyway

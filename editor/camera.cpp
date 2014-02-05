@@ -7,7 +7,7 @@
 #include "mouse.h"
 #include "storm.h"
 #include <istorm3d.h>
-#include <datatypedef.h>
+#include <DataTypeDef.h>
 #include <windows.h>
 
 //#define TEKES

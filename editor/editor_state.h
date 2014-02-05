@@ -3,13 +3,9 @@
 #ifndef INCLUDED_EDITOR_EDITOR_STATE_H
 #define INCLUDED_EDITOR_EDITOR_STATE_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_EDITOR_IEDITOR_STATE_H
-#  include "ieditor_state.h"
-#endif
+#include <boost/scoped_ptr.hpp>
+
+#include "ieditor_state.h"
 
 namespace frozenbyte {
     namespace filesystem {

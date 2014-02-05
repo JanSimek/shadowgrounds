@@ -5,7 +5,8 @@
 
 #include "terrain_lightmap.h"
 #include <vector>
-#include <datatypedef.h>
+
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

@@ -3,12 +3,9 @@
 #ifndef INCLUDED_EDITOR_CAMERA_H
 #define INCLUDED_EDITOR_CAMERA_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
+#include <boost/scoped_ptr.hpp>
 
-#include <datatypedef.h>
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

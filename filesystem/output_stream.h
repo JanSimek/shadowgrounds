@@ -3,14 +3,8 @@
 #ifndef INCLUDED_FILESYSTEM_OUTPUT_STREAM_H
 #define INCLUDED_FILESYSTEM_OUTPUT_STREAM_H
 
-#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
-#  define INCLUDED_BOOST_SHARED_PTR_HPP
-#  include <boost/shared_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <boost/shared_ptr.hpp>
+#include <string>
 
 namespace frozenbyte {
     namespace filesystem {

@@ -3,10 +3,7 @@
 #ifndef INCLUDED_EDITOR_CONVERT_TYPE_H
 #define INCLUDED_EDITOR_CONVERT_TYPE_H
 
-#ifndef INCLUDED_CASSERT
-#  define INCLUDED_CASSERT
-#  include <cassert>
-#endif
+#include <cassert>
 
 namespace frozenbyte {
     namespace filesystem {

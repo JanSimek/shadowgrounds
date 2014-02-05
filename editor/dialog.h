@@ -3,18 +3,9 @@
 #ifndef INCLUDED_EDITOR_DIALOG_H
 #define INCLUDED_EDITOR_DIALOG_H
 
-#ifndef INCLUDED_WINDOWS_H
-#  define INCLUDED_WINDOWS_H
-#  include <windows.h>
-#endif
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <windows.h>
+#include <boost/scoped_ptr.hpp>
+#include <string>
 
 namespace frozenbyte {
     namespace editor {

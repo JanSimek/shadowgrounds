@@ -3,14 +3,8 @@
 #ifndef INCLUDED_HMAP_LOADER_H
 #define INCLUDED_HMAP_LOADER_H
 
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <vector>
+#include <string>
 
 namespace frozenbyte {
     namespace filesystem {

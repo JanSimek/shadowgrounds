@@ -9,6 +9,7 @@
 #include "common_dialog.h"
 #include "resource/resource.h"
 #include "string_properties.h"
+
 #include <windows.h>
 #include <map>
 

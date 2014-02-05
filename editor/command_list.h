@@ -3,10 +3,7 @@
 #ifndef INCLUDED_EDITOR_COMMAND_LIST_H
 #define INCLUDED_EDITOR_COMMAND_LIST_H
 
-#ifndef INCLUDED_BOOST_SHARED_PTR_HPP
-#  define INCLUDED_BOOST_SHARED_PTR_HPP
-#  include <boost/shared_ptr.hpp>
-#endif
+#include <boost/shared_ptr.hpp>
 
 namespace frozenbyte {
     namespace editor {

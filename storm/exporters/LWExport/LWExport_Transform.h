@@ -3,15 +3,8 @@
 #ifndef INCLUDED_LWEXPORT_TRANSFORMS_H
 #define INCLUDED_LWEXPORT_TRANSFORMS_H
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
-
-#ifndef INCLUDED_LWRENDER_H
-#  define INCLUDED_LWRENDER_H
-#  include <lwrender.h>
-#endif
+#include <DataTypeDef.h>
+#include <lwrender.h>
 
 namespace frozenbyte {
     namespace exporter {

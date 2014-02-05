@@ -3,14 +3,8 @@
 #ifndef INCLUDED_EDITOR_ALIGN_UNITS_H
 #define INCLUDED_EDITOR_ALIGN_UNITS_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DatatypeDef.h>
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <DatatypeDef.h>
 
 class IStorm3D_Camera;
 

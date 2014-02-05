@@ -7,25 +7,13 @@
 #  pragma warning(disable: 4514) // removed unreferenced inline function (stl)
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
+#include <DataTypeDef.h>
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-#ifndef INCLUDED_EXPORT_FACE_H
-#  include "Export_Face.h"
-#endif
-#ifndef INCLUDED_EXPORT_VERTEX_H
-#  include "Export_Vertex.h"
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <vector>
+
+#include "Export_Face.h"
+#include "Export_Vertex.h"
 
 namespace frozenbyte {
     namespace exporter {

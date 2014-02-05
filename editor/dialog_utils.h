@@ -3,10 +3,7 @@
 #ifndef INCLUDED_EDITOR_DIALOG_UTILS_H
 #define INCLUDED_EDITOR_DIALOG_UTILS_H
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
+#include <string>
 
 namespace frozenbyte {
     namespace editor {

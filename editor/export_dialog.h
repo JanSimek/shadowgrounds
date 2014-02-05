@@ -3,14 +3,8 @@
 #ifndef INCLUDED_EDITOR_EXPORT_DIALOG_H
 #define INCLUDED_EDITOR_EXPORT_DIALOG_H
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
+#include <string>
+#include <boost/scoped_ptr.hpp>
 
 namespace frozenbyte {
     namespace editor {

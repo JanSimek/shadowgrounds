@@ -6,13 +6,8 @@
 #include "terrain_lightmap.h"
 #include <vector>
 
-#ifndef INCLUDED_EDITOR_IMODE_H
-#  include "imode.h"
-#endif
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
+#include "imode.h"
+#include <boost/scoped_ptr.hpp>
 
 namespace frozenbyte {
     namespace editor {

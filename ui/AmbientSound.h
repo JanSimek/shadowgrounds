@@ -1,10 +1,7 @@
 #ifndef AMBIENT_SOUND_H
 #define AMBIENT_SOUND_H
 
-#ifndef INCLUDED_STL_STRING
-#  define INCLUDED_STL_STRING
-#  include <string>
-#endif
+#include <string>
 
 namespace sfx {
     class SoundLooper;

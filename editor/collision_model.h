@@ -3,24 +3,12 @@
 #ifndef INCLUDED_EDITOR_COLLISION_MODEL_H
 #define INCLUDED_EDITOR_COLLISION_MODEL_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_BOOST_UTILITY_HPP
-#  define INCLUDED_BOOST_UTILITY_HPP
-#  include <boost/utility.hpp>
-#endif
-#ifndef INCLUDED_EDITOR_STORM_H
-#  include "storm.h"
-#endif
-#ifndef INCLUDED_EDITOR_OBEJCT_SETTINGS_H
-#  include "object_settings.h"
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <string>
+#include <boost/utility.hpp>
+
+#include "storm.h"
+#include "object_settings.h"
 
 namespace frozenbyte {
     namespace editor {

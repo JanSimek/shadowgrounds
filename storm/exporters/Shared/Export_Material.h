@@ -9,19 +9,9 @@
 #  pragma warning(disable: 4710) // function not inlined
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
-
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include <DataTypeDef.h>
+#include <string>
+#include <vector>
 
 namespace frozenbyte {
     namespace exporter {

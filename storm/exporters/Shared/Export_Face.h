@@ -7,16 +7,9 @@
 #  pragma warning(disable: 4514) // removed unreferenced inline function (stl)
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
+#include <vector>
 
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
-
+#include <DataTypeDef.h>
 #include "Export_Types.h"
 
 #pragma pack(push, export_face_h)

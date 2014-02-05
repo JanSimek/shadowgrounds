@@ -3,18 +3,9 @@
 #ifndef INCLUDED_EDITOR_UNIT_SCRIPTS_H
 #define INCLUDED_EDITOR_UNIT_SCRIPTS_H
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <string>
+#include <vector>
 
 namespace frozenbyte {
     namespace editor {

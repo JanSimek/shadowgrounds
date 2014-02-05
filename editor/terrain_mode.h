@@ -3,21 +3,12 @@
 #ifndef INCLUDED_EDITOR_TERRAIN_MODE_H
 #define INCLUDED_EDITOR_TERRAIN_MODE_H
 
-#ifndef INCLUDED_EDITOR_IMODE_H
-#  include "imode.h"
-#endif
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <datatypedef.h>
-#endif
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include "imode.h"
+
+#include <DataTypeDef.h>
+
+#include <boost/scoped_ptr.hpp>
+#include <vector>
 
 namespace frozenbyte {
     namespace ui {

@@ -8,30 +8,14 @@
 #  pragma warning(disable: 4710) // function not inlined
 #endif
 
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <DataTypeDef.h>
-#endif
+#include <DataTypeDef.h>
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include <string>
+#include <vector>
 
-#ifndef INCLUDED_EXPORT_FACE_H
-#  include "Export_Face.h"
-#endif
-#ifndef INCLUDED_EXPORT_VERTEX_H
-#  include "Export_Vertex.h"
-#endif
-#ifndef INCLUDED_EXPORT_MATERIALS_H
-#  include "Export_Material.h"
-#endif
-
+#include "Export_Face.h"
+#include "Export_Vertex.h"
+#include "Export_Material.h"
 #include "Export_Types.h"
 
 #pragma pack(push, export_object_h)

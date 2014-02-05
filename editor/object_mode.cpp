@@ -16,10 +16,6 @@
 #include "icommand.h"
 #include "command_list.h"
 #include "common_dialog.h"
-
-//#include "istream.h"
-//#include "ostream.h"
-
 #include "object_settings.h"
 #include "ieditor_state.h"
 #include "color_picker.h"
@@ -41,8 +37,9 @@
 // HACK: hack hack...
 #include "light_mode.h"
 
-#include <istorm3d.h>
-#include <istorm3d_model.h>
+#include <IStorm3D.h>
+#include <IStorm3D_Model.h>
+
 #include <boost/shared_ptr.hpp>
 #include <boost/scoped_array.hpp>
 #include <stdlib.h>

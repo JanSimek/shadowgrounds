@@ -3,14 +3,8 @@
 #ifndef INCLUDED_EDITOR_COMMON_DIALOG_H
 #define INCLUDED_EDITOR_COMMON_DIALOG_H
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_VECTOR
-#  define INCLUDED_VECTOR
-#  include <vector>
-#endif
+#include <string>
+#include <vector>
 
 namespace frozenbyte {
     namespace editor {

@@ -1,10 +1,7 @@
 #ifndef INCLUDED_EDITOR_IDLG_HANDLER_H
 #define INCLUDED_EDITOR_IDLG_HANDLER_H
 
-#ifndef INCLUDED_WINDOWS_H
-#  define INCLUDED_WINDOWS_H
-#  include <windows.h>
-#endif
+#include <windows.h>
 
 namespace frozenbyte {
     namespace editor {

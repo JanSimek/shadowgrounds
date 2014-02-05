@@ -3,14 +3,8 @@
 #ifndef INCLUDED_EDITOR_STRING_CONVERSIONS
 #define INCLUDED_EDITOR_STRING_CONVERSIONS
 
-#ifndef INCLUDED_STRING
-#  define INCLUDED_STRING
-#  include <string>
-#endif
-#ifndef INCLUDED_BOOST_LEXICAL_CAST_HPP
-#  define INCLUDED_BOOST_LEXICAL_CAST_HPP
-#  include <boost/lexical_cast.hpp>
-#endif
+#include <string>
+#include <boost/lexical_cast.hpp>
 
 namespace frozenbyte {
     namespace editor {

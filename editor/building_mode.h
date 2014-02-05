@@ -3,18 +3,10 @@
 #ifndef INCLUDED_EDITOR_BUILDING_MODE_H
 #define INCLUDED_EDITOR_BUILDING_MODE_H
 
-#ifndef INCLUDED_EDITOR_IMODE_H
-#  include "imode.h"
-#endif
+#include "imode.h"
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_DATATYPEDEF_H
-#  define INCLUDED_DATATYPEDEF_H
-#  include <datatypedef.h>
-#endif
+#include <boost/scoped_ptr.hpp>
+#include <DataTypeDef.h>
 
 namespace frozenbyte {
     namespace editor {

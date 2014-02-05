@@ -3,13 +3,9 @@
 #ifndef INCLUDED_FILESYSTEM_ZIP_PACKAGE
 #define INCLUDED_FILESYSTEM_ZIP_PACKAGE
 
-#ifndef INCLUDED_BOOST_SCOPED_PTR_HPP
-#  define INCLUDED_BOOST_SCOPED_PTR_HPP
-#  include <boost/scoped_ptr.hpp>
-#endif
-#ifndef INCLUDED_FILESYSTEM_IFILE_PACKAGE_H
-#  include "ifile_package.h"
-#endif
+#include <boost/scoped_ptr.hpp>
+
+#include "ifile_package.h"
 
 namespace frozenbyte {
     namespace filesystem {
